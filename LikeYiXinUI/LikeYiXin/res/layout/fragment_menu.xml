@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_bg"
+    android:scrollbars="@null"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/menu_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/head_default_local" />
+
+            <TextView
+                style="@style/MenuText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="昵称" />
+
+            <TextView
+                style="@style/MenuText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="账号"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:id="@+id/menu_radio"
+                 >
+
+                <RadioButton
+                    style="@style/RadioStyle"
+                    android:id="@+id/yixin"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@drawable/menu_item_sl"
+                    android:button="@null"
+					android:checked="true"
+                    android:drawableLeft="@drawable/tool_box_fragment_yixin_icon"
+                    android:gravity="center"
+                    android:text="易\t\t信" />
+
+                <RadioButton
+                    style="@style/RadioStyle"
+                    android:id="@+id/penyou"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@drawable/menu_item_sl"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/tool_box_friend_icon"
+                    android:gravity="center"
+                    android:text="朋友圈" />
+                
+                <RadioButton
+                    style="@style/RadioStyle"
+                    android:id="@+id/setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@drawable/menu_item_sl"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/tool_box_fragment_settings_icon"
+                    android:gravity="center"
+                    android:text="设\t\t置" />
+            </RadioGroup>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tool_box_fragment_bg_normal"
+                android:gravity="center_horizontal"
+                >
+                <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+					android:background="@drawable/menu_bottom_button_sl"
+					style="@style/MenuText"
+					android:textSize="12sp"
+					android:text="邀请好友"
+					android:layout_gravity="bottom"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>
