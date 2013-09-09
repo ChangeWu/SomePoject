@@ -1,0 +1,1 @@
+LikeYiXin为主项目，请添加slidingmenu-library项目依赖
