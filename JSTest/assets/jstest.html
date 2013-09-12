@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>测试调用js</title>
+<script language="javascript">
+ function personlist(jsons){      //传入json
+  var table=document.getElementById("person");
+  var arr=eval(jsons);
+  for(var i=0;i<arr.length;i++){
+   var jsonobj = arr[i];
+   var tr = table.insertRow(table.rows.length);
+   var td1 = tr.insertCell(0);
+   var td2 = tr.insertCell(1);
+   var td3 = tr.insertCell(2);
+   var td4 = tr.insertCell(3);
+   td1.innerHTML = jsonobj.id;
+   td2.innerHTML = jsonobj.name;
+   td3.innerHTML = jsonobj.age;
+   td4.innerHTML = jsonobj.address;
+  }
+ }
+</script>
+</head>
+<body onload="caller.javaMethod()">
+<table width="100%" id="person">
+ <tr bgcolor="#33FFFF">
+     <td>id</td>
+        <td>name</td>
+        <td>age</td>
+        <td>address</td>
+    </tr>
+    <!-- <a onclick="window.caller.show()">click me</a> -->
+</table>
+</body>
+</html>
