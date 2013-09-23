@@ -1,0 +1,27 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 18
+/svn/BOB/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/BOB/!svn/ver/1847/Project/XST_NEW/android/trunk/ProjectTimeViewers
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/AndroidManifest.xml
+END
+project.properties
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/BOB/!svn/ver/1847/Project/XST_NEW/android/trunk/ProjectTimeViewers/project.properties
+END
+proguard.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/BOB/!svn/ver/1847/Project/XST_NEW/android/trunk/ProjectTimeViewers/proguard.cfg
+END

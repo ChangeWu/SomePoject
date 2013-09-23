@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/list_item_bg"
+    android:orientation="horizontal" >
+
+    <com.bobinfo.projecttimeviewers.view.RemoteImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#00000000"
+        android:id="@+id/pic"
+        android:layout_gravity="center_vertical"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/listTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name:name" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/listTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time:time" />
+
+        <TextView
+            android:id="@+id/misstime"
+            style="@style/listTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="misstime:misstime" />
+    </LinearLayout>
+
+</LinearLayout>

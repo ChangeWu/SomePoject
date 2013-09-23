@@ -1,0 +1,56 @@
+package com.bobinfo.projecttimeviewers;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import com.bobinfo.projecttimeviewers.modle.ProjectTimes;
+
+public class ShowListAdapter extends BaseAdapter {
+	private ProjectTimes project;
+	private Context m_ctx;
+	public ShowListAdapter(Context ctx,ProjectTimes project) {
+		this.m_ctx = ctx;
+		this.project = project;
+	}
+	@Override
+	public int getCount() {
+		return project.projects!=null?project.projects.size():0;
+	}
+
+	@Override
+	public Object getItem(int position) {
+		return position;
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		ViewHold hold = null;
+		if(convertView==null){
+			convertView = View.inflate(m_ctx, R.layout.showlist_item, null);
+			hold = new ViewHold();
+			convertView.setTag(hold);
+		}else{
+			hold = (ViewHold)convertView.getTag();
+		}
+		hold.misstime = (TextView)convertView.findViewById(R.id.misstime);
+		hold.name = (TextView)convertView.findViewById(R.id.name);
+		hold.time = (TextView)convertView.findViewById(R.id.time);
+		hold.misstime.setText("工程名称："+project.projects.get(position).misstime);
+		hold.name.setText("预计结束时间："+project.projects.get(position).name);
+		hold.time.setText("超期："+project.projects.get(position).time+"天");
+		
+		return convertView;
+	}
+	class ViewHold{
+		TextView name,time,misstime;
+	}
+
+}

@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.util.concurrent.CancellationException;
 
 import com.bobinfo.projecttimeviewers.exception.ResponseException;
-import com.bobinfo.projecttimeviewers.modle.UserInfo;
+import com.bobinfo.projecttimeviewers.modle.BaseInfo;
+import com.bobinfo.projecttimeviewers.modle.ProjectTimes;
+import com.bobinfo.projecttimeviewers.modle.UserInfos;
 import com.bobinfo.projecttimeviewers.util.BasicServiceParams;
 
 /**
@@ -28,8 +30,32 @@ public interface IPlatService extends IService<BasicServiceParams> {
 	 * @throws ResponseException
 	 *             返回异常
 	 */
-	public UserInfo toLogin(String loginName, String password)
+	public UserInfos toLogin(String loginName, String password)
 			throws CancellationException, IllegalArgumentException,
 			IOException, ResponseException;
 
+	/**
+	 * 获得工期列表
+	 * @param userId
+	 * @return
+	 * @throws CancellationException
+	 * @throws IllegalArgumentException
+	 * @throws IOException
+	 * @throws ResponseException
+	 */
+	public ProjectTimes getProjectJTimes(String userId) throws CancellationException, IllegalArgumentException,
+	IOException, ResponseException;
+	
+	/**
+	 * 上传图片
+	 * @param fileName
+	 * @param contentStr
+	 * @return
+	 * @throws CancellationException
+	 * @throws IllegalArgumentException
+	 * @throws IOException
+	 * @throws ResponseException
+	 */
+	public BaseInfo uploadImage(String fileName,String contentStr)  throws CancellationException, IllegalArgumentException,
+	IOException, ResponseException;
 }

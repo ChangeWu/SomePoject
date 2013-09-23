@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/util
+END
+HelperUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/util/HelperUtil.java
+END
+StringHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/util/StringHelper.java
+END
+BasicServiceParams.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/util/BasicServiceParams.java
+END
+ServiceFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/util/ServiceFactory.java
+END
+AssistInputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/util/AssistInputStream.java
+END

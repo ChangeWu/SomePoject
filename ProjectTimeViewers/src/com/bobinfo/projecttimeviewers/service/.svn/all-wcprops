@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/service
+END
+IDownloadServices.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/service/IDownloadServices.java
+END
+IPlatService.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/BOB/!svn/ver/1852/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/service/IPlatService.java
+END
+IService.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/service/IService.java
+END

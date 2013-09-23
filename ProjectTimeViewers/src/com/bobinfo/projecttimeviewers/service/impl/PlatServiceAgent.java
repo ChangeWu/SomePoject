@@ -4,8 +4,12 @@ import java.io.IOException;
 import java.util.concurrent.CancellationException;
 
 import com.bobinfo.projecttimeviewers.exception.ResponseException;
-import com.bobinfo.projecttimeviewers.modle.UserInfo;
+import com.bobinfo.projecttimeviewers.modle.BaseInfo;
+import com.bobinfo.projecttimeviewers.modle.ProjectTimes;
+import com.bobinfo.projecttimeviewers.modle.UserInfos;
+import com.bobinfo.projecttimeviewers.request.impl.GetProjectTimeRequest;
 import com.bobinfo.projecttimeviewers.request.impl.LoginRequest;
+import com.bobinfo.projecttimeviewers.request.impl.UploadPicRequest;
 import com.bobinfo.projecttimeviewers.service.IPlatService;
 import com.bobinfo.projecttimeviewers.util.BasicServiceParams;
 
@@ -47,10 +51,24 @@ public class PlatServiceAgent extends
 	 * @see andr.paiyao.netaffair.api.IPlatService#toLogin(java.lang.String, java.lang.String)
 	 */
 	@Override
-	public UserInfo toLogin(String loginName, String password)
+	public UserInfos toLogin(String loginName, String password)
 			throws CancellationException, IllegalArgumentException,
 			IOException, ResponseException {
 		return Send(new LoginRequest(loginName, password));
+	}
+
+	@Override
+	public ProjectTimes getProjectJTimes(String userId)
+			throws CancellationException, IllegalArgumentException,
+			IOException, ResponseException {
+		return Send(new GetProjectTimeRequest(userId));
+	}
+	
+	@Override
+	public BaseInfo uploadImage(String fileName, String contentStr)
+			throws CancellationException, IllegalArgumentException,
+			IOException, ResponseException {
+		return Send(new UploadPicRequest(fileName, contentStr));
 	}
 
 }

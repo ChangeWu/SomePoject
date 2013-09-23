@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/async
+END
+AutoCancelController.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/async/AutoCancelController.java
+END
+AutoCancelFramework.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/async/AutoCancelFramework.java
+END
+Cancelable.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/async/Cancelable.java
+END
+AsyncFramework.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/async/AsyncFramework.java
+END
+AutoCancelServiceFramework.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/BOB/!svn/ver/1848/Project/XST_NEW/android/trunk/ProjectTimeViewers/src/com/bobinfo/projecttimeviewers/async/AutoCancelServiceFramework.java
+END
