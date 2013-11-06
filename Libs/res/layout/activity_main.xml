@@ -33,5 +33,14 @@
 	    android:layout_height="wrap_content"
 	    android:text="reset"
 	    android:id="@+id/reset"/>
+	<Button android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="record"
+	    android:id="@+id/record"/>
+	
+	<SurfaceView android:layout_width="match_parent"
+	    android:layout_height="200dp"
+	    android:id="@+id/suface"
+	    />
 </LinearLayout>
 
