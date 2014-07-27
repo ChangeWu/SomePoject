@@ -26,8 +26,19 @@ public class MainActivity extends Activity implements DataControlDelegate{
 		initDatas();
 		ListView lv = (ListView)findViewById(R.id.lv);
 		adapter = new DelegateForAdapter(this, names);
-		adapter.setDataControlDelegate(this);
 		lv.setAdapter(adapter);
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		adapter.setDataControlDelegate(this);//绑定委托对象
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		adapter.setDataControlDelegate(null);//去除绑定委托对象
 	}
 
 	@Override
