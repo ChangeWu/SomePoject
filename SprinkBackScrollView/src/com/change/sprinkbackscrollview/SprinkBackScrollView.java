@@ -9,15 +9,21 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ScrollView;
 
 
-/**
- * 回弹scrollview
- * @author Change
- *
- */
-public class SprinkBackScrollView extends ScrollView {
+
+/** 
+* @ClassName: SprinkBackScrollView 
+* @Description:回弹scrollview
+* @author ycf_Change 
+* @date 2014年9月17日 下午3:39:55 
+* @version from 1.0 
+*/
+
+public class SprinkBackScrollView extends ScrollView{
 	private View inner;//内部控件
 
-	private float y;
+	private float preY;
+	private float downY;
+	private float disY;
 	private float demp = 0.3f; //阻尼系数
 	private Rect normal = new Rect();//记录位置
 	
@@ -44,26 +50,32 @@ public class SprinkBackScrollView extends ScrollView {
 	}
 	
 	
-	
-	
 
+	/** 
+	* @Title: commOnTouchEvent 
+	* @Description:  触摸事件处理
+	* @param @param ev   
+	* @return void    
+	* @throws 
+	*/
 	public void commOnTouchEvent(MotionEvent ev) {
 		int action = ev.getAction();
 		switch (action) {
 		case MotionEvent.ACTION_DOWN:
-			y = ev.getY();
+			downY = ev.getY(); 
+			preY = downY;
 			break;
 		case MotionEvent.ACTION_UP:
+			float upY = ev.getY();
+			disY = Math.abs(upY-downY);
 			if (isNeedAnimation()) {
-				animation();
+				animationBack();
 			}
 			break;
 		case MotionEvent.ACTION_MOVE:
-			final float preY = y;
 			float nowY = ev.getY();
 			int distance = (int) ((preY - nowY));
-			y = nowY;
-			// 当滚动到最上或者最下时就不会再滚动，这时移动布局
+			preY = nowY;
 			if (isNeedMove(distance)) {
 				if (normal.isEmpty()) {
 					// 保存正常的布局位置
@@ -82,27 +94,54 @@ public class SprinkBackScrollView extends ScrollView {
 		}
 	}
 
-	// 开启动画移动
 
-	public void animation() {
-		// 开启移动动画
+	/** 
+	* @Title: animation 
+	* @Description: 回弹动画 
+	* @param    
+	* @return void    
+	* @throws 
+	*/
+	public void animationBack() {
 		TranslateAnimation ta = new TranslateAnimation(0, 0, inner.getTop(),
 				normal.top);
 		ta.setDuration(200);
 		inner.startAnimation(ta);
 		// 设置回到正常的布局位置
 		inner.layout(normal.left, normal.top, normal.right, normal.bottom);
-
 		normal.setEmpty();
-
+	}
+	
+	/** 
+	* @Title: animationTo 
+	* @Description:越界动画
+	* @param    
+	* @return void    
+	* @throws 
+	*/
+	public void animationTo(){
+		
 	}
 
-	// 是否需要开启动画
+	/** 
+	* @Title: isNeedAnimation 
+	* @Description:  是否开启动画
+	* @param @return   
+	* @return boolean    
+	* @throws 
+	*/
 	public boolean isNeedAnimation() {
 		return !normal.isEmpty();
 	}
 
-	// 是否需要移动布局
+	/** 
+	* @Title: isNeedMove 
+	* @Description:  判断是否到底部跟顶部
+	* @param @param distance
+	* @param @return   
+	* @return boolean    
+	* @throws 
+	*/
 	public boolean isNeedMove(int distance) {
 
 		int offset = inner.getMeasuredHeight() - getHeight();
@@ -112,4 +151,11 @@ public class SprinkBackScrollView extends ScrollView {
 		}
 		return false;
 	}
+	
+	
+	@Override
+	protected void onScrollChanged(int l, int t, int oldl, int oldt) {
+		super.onScrollChanged(l, t, oldl, oldt);
+	}
+
 }
